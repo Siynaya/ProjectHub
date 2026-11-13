@@ -1,138 +1,111 @@
-# ProjectHub – Personal Project Management Dashboard
+# 🚀 ProjectHub – Kişisel Proje Yönetim Paneli
 
-A modern, responsive web application for managing personal projects, organizing tasks, tracking progress, and monitoring productivity.
+ProjectHub, kişisel projelerin ve bu projelere ait görevlerin tek bir platform üzerinden oluşturulmasını, düzenlenmesini ve takip edilmesini sağlayan modern bir proje yönetim uygulamasıdır.
 
-## Features
+Uygulama, kullanıcıların projelerini daha organize bir şekilde yönetmelerini, görevlerini aşamalara ayırmalarını ve tamamlanma durumlarını görsel olarak takip etmelerini amaçlamaktadır.
 
-- **Dashboard Overview** - Summary cards showing total projects, active projects, completed tasks
-- **Project Management** - Create, edit, and delete projects with categories, priorities, and deadlines
-- **Task Management** - Kanban-style task board with To Do, In Progress, and Completed columns
-- **Progress Tracking** - Automatic progress calculation based on completed tasks
-- **Search & Filter** - Search projects and filter by status
-- **Dark Mode** - Modern dark-themed interface with toggle
-- **Local Storage** - All data persists locally in the browser
+## ✨ Özellikler
 
-## Technology Stack
+- **Dashboard:** Toplam proje, aktif proje, tamamlanan proje ve görev istatistiklerini görüntüleme.
+- **Proje Yönetimi:** Yeni projeler oluşturma, mevcut projeleri düzenleme ve silme.
+- **Görev Yönetimi:** Projelere bağlı görevler oluşturma, düzenleme ve silme.
+- **Kanban Panosu:** Görevleri Yapılacak (To Do), Devam Ediyor (In Progress) ve Tamamlandı (Completed) aşamalarında takip etme.
+- **İlerleme Takibi:** Tamamlanan görevlerin toplam görevlere oranına göre proje ilerlemesini otomatik hesaplama.
+- **Öncelik Belirleme:** Proje ve görevlere Düşük, Orta ve Yüksek öncelik atama.
+- **Arama ve Filtreleme:** Projeleri ve görevleri durumlarına göre filtreleme ve arama.
+- **Veri Kalıcılığı:** Proje ve görev bilgilerinin tarayıcının LocalStorage alanında saklanması.
+- **Responsive Tasarım:** Farklı ekran boyutlarına uyum sağlayan modern arayüz.
 
-- **React** (19.3.1) - UI library
-- **Vite** (8.3.8) - Build tool and dev server
-- **Tailwind CSS** (4.0) - CSS framework
-- **Lucide React** - Icon library
-- **React Router DOM** - Client-side routing
+## 🛠️ Kullanılan Teknolojiler
 
-## Getting Started
+| Teknoloji | Kullanım Amacı |
+|---|---|
+| React | Kullanıcı arayüzü ve bileşen tabanlı uygulama geliştirme |
+| Vite | Geliştirme ortamı ve proje derleme |
+| JavaScript (ES6+) | Uygulama mantığı ve etkileşimler |
+| HTML5 | Sayfa yapısı |
+| CSS3 | Arayüz tasarımı ve responsive düzen |
+| LocalStorage | Verilerin tarayıcıda kalıcı olarak saklanması |
+| Lucide React | Arayüz ikonları |
 
-### Prerequisites
+## 💻 Kurulum ve Çalıştırma
 
-- Node.js (v18 or higher)
-- npm or pnpm
+Projeyi yerel bilgisayarınızda çalıştırmak için aşağıdaki adımları takip edebilirsiniz.
 
-### Installation
+### Gereksinimler
+
+- Node.js
+- npm
+- Git (isteğe bağlı)
+
+### 1. Projeyi klonlayın
 
 ```bash
-# Clone or navigate to the project directory
-cd project
+git clone https://github.com/Siynaya/ProjectHub.git
+```
 
-# Install dependencies
+### 2. Proje dizinine girin
+
+```bash
+cd ProjectHub
+```
+
+### 3. Bağımlılıkları yükleyin
+
+```bash
 npm install
 ```
 
-### Development
+### 4. Uygulamayı başlatın
 
 ```bash
-# Start the development server
 npm run dev
-
-# The application will be available at http://localhost:3000
 ```
 
-### Production Build
+Terminalde gösterilen yerel adresi (genellikle `http://localhost:5173`) tarayıcınızda açarak uygulamayı kullanabilirsiniz.
+
+### 5. Production build oluşturma
+
+Uygulamanın dağıtım için derlenmiş sürümünü oluşturmak isterseniz:
 
 ```bash
-# Create an optimized production build
 npm run build
-
-# The build output will be in the `dist` directory
 ```
 
-### Preview Production Build
+## 🤖 Yapay Zekâ Destekli Geliştirme Süreci
 
-```bash
-# Preview the production build locally
-npm run preview
-```
+Bu proje, eğitim programının yapay zekâ destekli web geliştirme yaklaşımı doğrultusunda, yerel ortamda çalışan yapay zekâ araçlarından yararlanılarak geliştirilmiştir.
 
-## Project Structure
+Geliştirme sürecinde aşağıdaki araçlar kullanılmıştır:
 
-```
-src/
-├── components/
-│   ├── Header.jsx       - Top navigation header with search and dark mode
-│   ├── Sidebar.jsx      - Sidebar navigation
-│   ├── StatCard.jsx     - Statistics cards component
-│   ├── ProjectCard.jsx  - Project display card
-│   ├── TaskCard.jsx     - Task display card
-│   ├── ProjectModal.jsx - Modal for creating/editing projects
-│   ├── TaskModal.jsx    - Modal for creating/editing tasks
-│   └── KanbanBoard.jsx  - Kanban-style task board
-├── pages/
-│   ├── Dashboard.jsx    - Main dashboard page
-│   ├── Projects.jsx     - Projects management page
-│   ├── Tasks.jsx        - Tasks management page
-│   ├── Analytics.jsx    - Analytics and insights page
-│   └── Settings.jsx     - Application settings page
-├── hooks/
-│   └── useLocalStorage.js - Custom hook for localStorage persistence
-├── utils/
-│   └── helpers.js       - Utility functions (date formatting, calculations)
-├── App.jsx              - Main app component with routing
-└── main.jsx             - Entry point with React DOM render
-```
+- **Ollama:** Yerel yapay zekâ modellerini çalıştırmak ve geliştirme ortamına entegre etmek amacıyla kullanılmıştır.
+- **Claude Code:** Proje geliştirme sürecinde yapay zekâ destekli kodlama asistanı olarak kullanılmıştır.
+- **Qwen3-Coder-Next:** Ollama üzerinden yerel olarak çalıştırılan ve kod üretimi ile geliştirme görevlerinde kullanılan yapay zekâ modelidir.
 
-## Features Overview
+Yapay zekâdan yararlanılan başlıca aşamalar:
 
-### Dashboard
-- Summary statistics (total projects, active projects, completed tasks)
-- Recent projects display
-- Recent activity feed
+1. **Proje Planlama:** Uygulamanın fikrinin netleştirilmesi, temel özelliklerin belirlenmesi ve uygulama mimarisinin planlanması.
+2. **Arayüz Geliştirme:** React bileşenlerinin oluşturulması, dashboard tasarımının hazırlanması ve kullanıcı arayüzünün geliştirilmesi.
+3. **Fonksiyonel Geliştirme:** Proje ve görev yönetimi, durum güncellemeleri, filtreleme ve LocalStorage entegrasyonunun uygulanması.
+4. **Hata Ayıklama ve İyileştirme:** Karşılaşılan problemlerin analiz edilmesi, kod düzenlemelerinin yapılması ve uygulamanın geliştirilmesi.
 
-### Project Management
-- Create new projects with title, description, category, priority, dates
-- Edit existing projects
-- Delete projects (with confirmation)
-- View project details including progress
+Yapay zekâ, geliştirme sürecinde bir yardımcı araç olarak kullanılmış; ortaya çıkan uygulama çalıştırılarak ve işlevleri kontrol edilerek değerlendirilmiştir.
 
-### Task Management
-- Kanban-style three-column layout (To Do, In Progress, Completed)
-- Create tasks with title, description, due date, priority
-- Edit tasks
-- Delete tasks
-- Change task status via dropdown or drag-and-drop style selection
+## 📌 Proje Amacı ve Kazanımlar
 
-### Search & Filter
-- Search projects by name
-- Filter by status (active, completed)
-- Sort by deadline or creation date
+ProjectHub projesi ile modern web geliştirme teknolojilerinin pratik olarak uygulanması hedeflenmiştir.
 
-### Data Persistence
-- All projects and tasks stored in localStorage
-- Data persists across browser refreshes
-- Clean handling of empty/invalid data
+Proje kapsamında:
 
-## Browser Support
+- React ile bileşen tabanlı uygulama geliştirme,
+- JavaScript ile dinamik kullanıcı etkileşimleri oluşturma,
+- CSS ile modern ve responsive arayüz tasarlama,
+- LocalStorage kullanarak veri kalıcılığı sağlama,
+- Yapay zekâ araçlarını yazılım geliştirme sürecine entegre etme,
+- Git ve GitHub kullanarak sürüm kontrolü gerçekleştirme
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+konularında uygulamalı deneyim kazanılması amaçlanmıştır.
 
-## Deployment
+## 📄 Lisans
 
-This application can be deployed to:
-- **Vercel** - Connect your repository and deploy
-- **Netlify** - Drag and drop the `dist` folder
-- **GitHub Pages** - Use `vite-gh-pages` or similar
-
-## License
-
-MIT
+Bu proje eğitim programı kapsamında geliştirilmiş kişisel bir çalışmadır.
